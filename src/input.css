@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+	font-family: Tahoma, sans-serif;
+	@apply text-center mx-auto tracking-wider text-sm;
+}
+
+.container {
+	@apply flex justify-center items-center flex-col;
+}
+
+
+.reset-btn {
+	@apply cursor-pointer;
+}
+
+.btn {
+	@apply rounded-lg border-none text-white p-2 m-3;
+}
+
+.reset-btn {
+	@apply bg-black;
+}
+
+
+
+/* ---------------------------------------------------------------------------------
+CARDS */
+
+.playGround {
+	@apply bg-gradient-to-t from-blue-400 to-pink-500 rounded-lg flex flex-wrap justify-around items-center w-96 h-96 mt-14 p-3;
+}
+
+.playGround,
+.card {
+	box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+}
+
+.card {
+	@apply bg-amber-400 rounded-lg flex justify-center items-center w-20 h-20;
+}
+.icon {
+	@apply text-5xl hidden;
+	
+}
+
+.playGround .card.return .icon{
+	@apply bg-white block;
+} 
+.playGround .card.return{
+	@apply bg-white cursor-default pointer-events-none;
+	transform: rotateY(180deg);
+	transition: transform 0.3s linear;
+	
+}
+
+.return{
+	@apply bg-white visible;
+	
+}
+
+.playGround .card.similar {
+	@apply bg-white visible cursor-default;
+	animation: pulse 1s;
+}
+
+.similar {
+	@apply bg-white
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(1);
+	}
+	80% {
+		transform: scale(1.1);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+
+
+/* ---------------------------------------------------------------------------------
+MODAL */
+
+/* The Modal (background) */
+.modal {
+	@apply hidden fixed z-10 w-full h-full pt-12 left-0 top-0;
+	background-color: rgba(0,0,0,0.4); 
+  }
+  
+  /* Modal Content */
+  .modal-content {
+	@apply relative w-96 bg-gradient-to-t from-blue-400 to-pink-500 rounded-2xl p-3 m-auto ;
+	padding: 0;
+	border: 1px solid #888;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+	animation-name: animatetop;
+	animation-duration: 0.4s
+  }
+  
+  @keyframes animatetop {
+	from {top:-200px; opacity:0}
+	to {top:0; opacity:1}
+  }
+  
+  /* The Close Button */
+  .close {
+	  @apply text-white float-right text-xl font-bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+	color: #ffffff;
+	text-decoration: none;
+	cursor: pointer;
+  }
+  
+  .modal-header {
+	@apply m-3 font-bold text-white text-xl;
+  }
+  
+  .modal-body {
+	@apply text-white text-center;
+}
+  
+ 

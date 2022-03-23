@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/png" href="icon.png" />
+  <link href="/dist/output.css" rel="stylesheet">
+  <title>Memory</title>
+</head>
+<body>
+   
+    <div class="container">
+      <header class="header">
+        <h1 class="text-3xl m-3">Memory</h1>
+      </header>
+    
+      <div class="info-panel">
+        <p> <span class="countClick">0</span> Coups effectués. </p>
+        <p><span class="found">0</span> paires trouvées</p>
+       
+        <div class="reset">
+          <button class="btn reset-btn" id="reset">Reset</button>
+        </div>
+      </div>
+    
+      <div class="playGround"></div>
+
+    </div>
+
+
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+        <h2>FÉLICITATIONS !!!</h2>
+      </div>
+      <div class="modal-body">
+      </div>
+      <div class="modal-footer">
+        <div class="reset">
+          <button class="btn reset-btn" id="replay">Rejouer</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <script src="main.js"></script>
+</body>
+</html>
